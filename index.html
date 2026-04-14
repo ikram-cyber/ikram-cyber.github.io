@@ -8,34 +8,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { background-color: #050811; }
-        .cyber-card { 
+        
+        .cyber-card {
             background: rgba(15, 23, 42, 0.6);
-            border: 1px solid #0C0CF6;
+            border: 1px solid rgba(168, 85, 247, 0.3);
             backdrop-filter: blur(10px);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
+        
         .cyber-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(12, 12, 246, 0.5);
-            border-color: #4f46e5;
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+            border-color: #a855f7;
         }
-        .text-neon { color: #0C0CF6; text-shadow: 0 0 10px rgba(12, 12, 246, 0.8); }
+
+        /* EFEK LAMPU NEON BERDENYUT */
+        .text-neon { 
+            color: #eabfff; 
+            text-shadow: 
+                0 0 5px #a855f7,
+                0 0 10px #a855f7,
+                0 0 20px #9333ea,
+                0 0 40px #9333ea,
+                0 0 80px #7e22ce;
+            animation: neon-pulsate 1.5s infinite alternate;
+        }
+
+        @keyframes neon-pulsate {
+            0% {
+                text-shadow: 
+                    0 0 2px #a855f7,
+                    0 0 5px #a855f7,
+                    0 0 10px #9333ea,
+                    0 0 20px #9333ea;
+            }
+            100% {
+                text-shadow: 
+                    0 0 5px #a855f7,
+                    0 0 15px #a855f7,
+                    0 0 30px #9333ea,
+                    0 0 60px #9333ea,
+                    0 0 90px #7e22ce;
+            }
+        }
+
         .btn-main {
-            background: linear-gradient(135deg, #0C0CF6 0%, #4f46e5 100%);
+            background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
         }
     </style>
 </head>
-<body class="text-slate-300 font-sans selection:bg-blue-600">
-
+<body class="text-slate-300 font-sans selection:bg-purple-600">
+    
     <header class="relative py-24 px-6 text-center overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-blue-600/5 blur-[120px] rounded-full"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-purple-600/5 blur-[120px] rounded-full"></div>
         <div class="relative z-10">
-            <div class="mb-4 inline-block p-2 bg-blue-600/10 rounded-2xl border border-blue-600/20">
-                <p class="text-[10px] tracking-[0.5em] font-black text-blue-400 uppercase px-4">System Central Control</p>
+            <div class="mb-4 inline-block p-2 bg-purple-600/10 rounded-2xl border border-purple-600/20">
+                <p class="text-[10px] tracking-[0.5em] font-black text-purple-400 uppercase px-4">System Central Control</p>
             </div>
+            
             <h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter mb-4">
                 IKRAM <span class="text-neon">CYBER</span> SYSTEM
             </h1>
+            
             <p class="max-w-xl mx-auto text-slate-500 text-sm md:text-base leading-relaxed">
                 Integrasi teknologi cerdas, sistem otomatisasi tingkat tinggi, dan infrastruktur digital profesional.
             </p>
@@ -44,9 +78,9 @@
 
     <main class="max-w-5xl mx-auto px-6 pb-32">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
+
             <div class="cyber-card p-10 rounded-[2rem] group relative overflow-hidden">
-                <div class="absolute -right-4 -top-4 text-9xl text-blue-600/5 rotate-12 group-hover:rotate-0 transition-transform duration-700">
+                <div class="absolute -right-4 -top-4 text-9xl text-purple-600/5 rotate-12 group-hover:rotate-0 transition-transform duration-700">
                     <i class="fas fa-code"></i>
                 </div>
                 <i class="fas fa-microchip text-4xl text-neon mb-6"></i>
@@ -57,19 +91,19 @@
                 </a>
             </div>
 
-            <div class="cyber-card p-10 rounded-[2rem] group relative overflow-hidden border-purple-900/50">
-                <div class="absolute -right-4 -top-4 text-9xl text-purple-600/5 rotate-12">
+            <div class="cyber-card p-10 rounded-[2rem] group relative overflow-hidden border-pink-900/50 hover:border-pink-500">
+                <div class="absolute -right-4 -top-4 text-9xl text-pink-600/5 rotate-12">
                     <i class="fas fa-shield-alt"></i>
                 </div>
-                <i class="fas fa-user-shield text-4xl text-purple-500 mb-6"></i>
+                <i class="fas fa-user-shield text-4xl text-pink-500 mb-6"></i>
                 <h3 class="text-2xl font-black text-white mb-3 italic">ikram-portfolio</h3>
                 <p class="text-sm text-slate-400 mb-8 leading-relaxed">Representasi profesional yang menampilkan dokumentasi proyek strategis dan kapabilitas infrastruktur digital.</p>
-                <a href="https://ikram-portfolio-f73a3.web.app" target="_blank" class="inline-flex items-center text-xs font-bold tracking-widest text-purple-400 border border-purple-500/30 px-6 py-3 rounded-xl hover:bg-purple-600 hover:text-white transition-all">
+                <a href="https://ikram-portfolio-f73a3.web.app" target="_blank" class="inline-flex items-center text-xs font-bold tracking-widest text-pink-400 border border-pink-500/30 px-6 py-3 rounded-xl hover:bg-pink-600 hover:text-white transition-all">
                     LIHAT PROFIL <i class="fas fa-chevron-right ml-2"></i>
                 </a>
             </div>
 
-            <div class="cyber-card p-10 rounded-[2rem] group relative overflow-hidden border-emerald-900/50">
+            <div class="cyber-card p-10 rounded-[2rem] group relative overflow-hidden border-emerald-900/50 hover:border-emerald-500">
                 <i class="fas fa-network-wired text-4xl text-emerald-500 mb-6"></i>
                 <h3 class="text-2xl font-black text-white mb-3 italic">cyber-link</h3>
                 <p class="text-sm text-slate-400 mb-8 leading-relaxed">Pusat konektivitas untuk integrasi identitas digital dan akses jaringan komunitas eksklusif.</p>
@@ -78,7 +112,7 @@
                 </a>
             </div>
 
-            <div class="cyber-card p-10 rounded-[2rem] group relative overflow-hidden border-orange-900/50">
+            <div class="cyber-card p-10 rounded-[2rem] group relative overflow-hidden border-orange-900/50 hover:border-orange-500">
                 <i class="fas fa-wave-square text-4xl text-orange-500 mb-6"></i>
                 <h3 class="text-2xl font-black text-white mb-3 italic">Premium Audio</h3>
                 <p class="text-sm text-slate-400 mb-8 leading-relaxed">Distribusi produk digital premium untuk optimalisasi kognitif dan pengembangan potensi diri.</p>
@@ -86,7 +120,7 @@
                     MASUK TOKO <i class="fas fa-shopping-bag ml-2"></i>
                 </a>
             </div>
-
+            
         </div>
     </main>
 
@@ -95,6 +129,5 @@
             Developed by ikram-cyber &copy; 2026
         </p>
     </footer>
-
 </body>
 </html>
