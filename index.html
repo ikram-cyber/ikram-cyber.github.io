@@ -21,10 +21,10 @@
         .icon-glow { animation: pulse-glow 3s infinite; }
     </style>
 </head>
-<body class="text-slate-300 antialiased pb-20 selection:bg-yellow-600/30 relative z-0">
+<body class="text-slate-300 antialiased pb-20 selection:bg-yellow-600/30 relative z-0 flex flex-col min-h-screen">
     <div class="ambient-glow"></div>
     
-    <main class="max-w-md mx-auto px-6 pt-16 space-y-10">
+    <main class="max-w-md mx-auto px-6 pt-16 flex-1 w-full space-y-10">
         
         <div class="text-center space-y-4">
             <div class="w-20 h-20 mx-auto rounded-full border border-[#d4af37]/40 flex items-center justify-center bg-black/50 backdrop-blur-sm mb-6 relative">
@@ -40,7 +40,7 @@
                 Ikram <span class="gold-text italic">Cyber System</span>
             </h1>
             <p class="text-slate-400 text-xs font-light leading-relaxed tracking-wide">
-                Digital Ecosystem & Professional Hub
+                Digital Ecosystem & Premium Frequencies
             </p>
             <div class="w-12 h-[1px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto mt-4"></div>
         </div>
@@ -58,55 +58,23 @@
                 <i class="fas fa-chevron-right text-slate-600 text-xs group-hover:text-[#d4af37] transition-colors"></i>
             </a>
 
-            <a href="#" class="flex items-center p-5 luxury-card luxury-border rounded-2xl group">
-                <div class="w-12 h-12 rounded-full bg-black/40 border border-white/10 flex items-center justify-center shrink-0 mr-4 group-hover:border-[#d4af37]/50 transition-colors">
-                    <i class="fas fa-chart-line text-[#d4af37] text-lg"></i>
-                </div>
-                <div class="flex-1">
-                    <h2 class="font-luxury text-white text-lg group-hover:text-[#fcf6ba] transition-colors">Financial System</h2>
-                    <p class="text-[9px] text-slate-400 font-light tracking-widest uppercase mt-1">Ledger & Firebase App</p>
-                </div>
-                <i class="fas fa-chevron-right text-slate-600 text-xs group-hover:text-[#d4af37] transition-colors"></i>
-            </a>
-
-            <a href="#" class="flex items-center p-5 luxury-card luxury-border rounded-2xl group">
-                <div class="w-12 h-12 rounded-full bg-black/40 border border-white/10 flex items-center justify-center shrink-0 mr-4 group-hover:border-[#d4af37]/50 transition-colors">
-                    <i class="fas fa-user-tie text-[#d4af37] text-lg"></i>
-                </div>
-                <div class="flex-1">
-                    <h2 class="font-luxury text-white text-lg group-hover:text-[#fcf6ba] transition-colors">Professional Profile</h2>
-                    <p class="text-[9px] text-slate-400 font-light tracking-widest uppercase mt-1">Pharmacy Tech / STRTTK</p>
-                </div>
-                <i class="fas fa-chevron-right text-slate-600 text-xs group-hover:text-[#d4af37] transition-colors"></i>
-            </a>
-
-            <a href="https://github.com/ikram-cyber/cyber-hub-ikram" target="_blank" class="flex items-center p-5 luxury-card luxury-border rounded-2xl group">
-                <div class="w-12 h-12 rounded-full bg-black/40 border border-white/10 flex items-center justify-center shrink-0 mr-4 group-hover:border-[#d4af37]/50 transition-colors">
-                    <i class="fab fa-github text-[#d4af37] text-lg"></i>
-                </div>
-                <div class="flex-1">
-                    <h2 class="font-luxury text-white text-lg group-hover:text-[#fcf6ba] transition-colors">Source Code & Scripts</h2>
-                    <p class="text-[9px] text-slate-400 font-light tracking-widest uppercase mt-1">cyber-hub-ikram Repo</p>
-                </div>
-                <i class="fas fa-chevron-right text-slate-600 text-xs group-hover:text-[#d4af37] transition-colors"></i>
-            </a>
-
         </div>
 
-        <footer class="pt-12 pb-6 text-center mt-8 relative">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
-            
-            <div class="flex justify-center gap-8 mb-8">
-                <a href="https://instagram.com/ikram_cyber" class="text-slate-500 hover:text-[#d4af37] transition-colors transform hover:scale-110"><i class="fab fa-instagram text-xl"></i></a>
-                <a href="https://tiktok.com/@ikram_cyber" class="text-slate-500 hover:text-[#d4af37] transition-colors transform hover:scale-110"><i class="fab fa-tiktok text-xl"></i></a>
-                <a href="https://wa.me/6282123436383" class="text-slate-500 hover:text-[#d4af37] transition-colors transform hover:scale-110"><i class="fab fa-whatsapp text-xl"></i></a>
-            </div>
-            
-            <p class="text-[9px] text-slate-600 uppercase tracking-[0.4em] font-light">
-                &copy; 2026 Ikram Cyber System
-            </p>
-        </footer>
-
     </main>
+
+    <footer class="pt-12 pb-6 text-center mt-auto relative">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
+        
+        <div class="flex justify-center gap-8 mb-8">
+            <a href="https://instagram.com/ikram_cyber" class="text-slate-500 hover:text-[#d4af37] transition-colors transform hover:scale-110"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="https://tiktok.com/@ikram_cyber" class="text-slate-500 hover:text-[#d4af37] transition-colors transform hover:scale-110"><i class="fab fa-tiktok text-xl"></i></a>
+            <a href="https://wa.me/6282123436383" class="text-slate-500 hover:text-[#d4af37] transition-colors transform hover:scale-110"><i class="fab fa-whatsapp text-xl"></i></a>
+        </div>
+        
+        <p class="text-[9px] text-slate-600 uppercase tracking-[0.4em] font-light">
+            &copy; 2026 Ikram Cyber System
+        </p>
+    </footer>
+
 </body>
 </html>
