@@ -3,109 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ikram Cyber System | Official Hub</title>
+    <title>Ikram Cyber System | Master Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050811; }
+        body { font-family: 'Montserrat', sans-serif; background-color: #030303; }
+        .font-luxury { font-family: 'Playfair Display', serif; }
+        .gold-text { background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); -webkit-background-clip: text; color: transparent; }
+        .luxury-border { border: 1px solid rgba(212, 175, 55, 0.3); }
+        .luxury-card { background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(15px); transition: all 0.4s ease; }
+        .luxury-card:hover { transform: translateY(-3px); background: rgba(15, 15, 15, 0.9); border-color: rgba(212, 175, 55, 0.6); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15); }
+        .ambient-glow { position: fixed; width: 100vw; height: 100vh; background: radial-gradient(circle at 50% -10%, rgba(212,175,55,0.08) 0%, rgba(0,0,0,0) 60%); z-index: -1; top: 0; left: 0; pointer-events: none; }
         
-        .cyber-card {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(168, 85, 247, 0.3);
-            backdrop-filter: blur(10px);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .cyber-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
-            border-color: #a855f7;
-        }
-
-        .text-neon { 
-            color: #eabfff; 
-            text-shadow: 
-                0 0 5px #a855f7,
-                0 0 10px #a855f7,
-                0 0 20px #9333ea,
-                0 0 40px #9333ea,
-                0 0 80px #7e22ce;
-            animation: neon-pulsate 1.5s infinite alternate;
-        }
-
-        @keyframes neon-pulsate {
-            0% { text-shadow: 0 0 2px #a855f7, 0 0 5px #a855f7, 0 0 10px #9333ea; }
-            100% { text-shadow: 0 0 5px #a855f7, 0 0 15px #a855f7, 0 0 30px #9333ea, 0 0 60px #9333ea; }
-        }
-
-        .btn-main { background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%); }
+        /* Fingerprint animation */
+        @keyframes pulse-glow { 0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 5px rgba(212,175,55,0.5)); } 50% { opacity: 1; filter: drop-shadow(0 0 15px rgba(212,175,55,0.8)); } }
+        .icon-glow { animation: pulse-glow 3s infinite; }
     </style>
 </head>
-<body class="text-slate-300 font-sans selection:bg-purple-600">
+<body class="text-slate-300 antialiased pb-20 selection:bg-yellow-600/30 relative z-0">
+    <div class="ambient-glow"></div>
     
-    <header class="relative py-24 px-6 text-center overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-purple-600/5 blur-[120px] rounded-full"></div>
-        <div class="relative z-10">
-            <div class="mb-4 inline-block p-2 bg-purple-600/10 rounded-2xl border border-purple-600/20">
-                <p class="text-[10px] tracking-[0.5em] font-black text-purple-400 uppercase px-4">System Central Control</p>
+    <main class="max-w-md mx-auto px-6 pt-16 space-y-10">
+        
+        <div class="text-center space-y-4">
+            <div class="w-20 h-20 mx-auto rounded-full border border-[#d4af37]/40 flex items-center justify-center bg-black/50 backdrop-blur-sm mb-6 relative">
+                <div class="absolute inset-0 rounded-full border border-[#d4af37]/20 animate-ping opacity-20"></div>
+                <i class="fas fa-fingerprint text-4xl gold-text icon-glow"></i>
             </div>
             
-            <h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter mb-4">
-                IKRAM <span class="text-neon">CYBER</span> SYSTEM
+            <div class="inline-block border border-[#d4af37]/40 text-[#d4af37] text-[9px] font-bold px-6 py-2 rounded-full uppercase tracking-[0.3em] bg-black/50">
+                Central Access Portal
+            </div>
+            
+            <h1 class="font-luxury text-3xl font-bold tracking-tight text-white mt-4">
+                Ikram <span class="gold-text italic">Cyber System</span>
             </h1>
-            
-            <p class="max-w-xl mx-auto text-slate-500 text-sm md:text-base leading-relaxed">
-                Integrasi teknologi cerdas, sistem otomatisasi tingkat tinggi, dan infrastruktur digital profesional.
+            <p class="text-slate-400 text-xs font-light leading-relaxed tracking-wide">
+                Digital Ecosystem & Professional Hub
             </p>
+            <div class="w-12 h-[1px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto mt-4"></div>
         </div>
-    </header>
 
-    <main class="max-w-5xl mx-auto px-6 pb-32">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="space-y-4 pt-4">
+            
+            <a href="https://ikram-cyber.github.io/audio-hub" class="flex items-center p-5 luxury-card luxury-border rounded-2xl group relative overflow-hidden">
+                <div class="w-12 h-12 rounded-full bg-black/40 border border-white/10 flex items-center justify-center shrink-0 mr-4 group-hover:border-[#d4af37]/50 transition-colors">
+                    <i class="fas fa-headphones-alt text-[#d4af37] text-lg"></i>
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-luxury text-white text-lg group-hover:text-[#fcf6ba] transition-colors">Premium Audio Hub</h2>
+                    <p class="text-[9px] text-slate-400 font-light tracking-widest uppercase mt-1">Brainwave & Frequencies</p>
+                </div>
+                <i class="fas fa-chevron-right text-slate-600 text-xs group-hover:text-[#d4af37] transition-colors"></i>
+            </a>
 
-            <div class="cyber-card p-10 rounded-[2rem] group relative overflow-hidden">
-                <i class="fas fa-microchip text-4xl text-purple-500 mb-6"></i>
-                <h3 class="text-2xl font-black text-white mb-3 italic">cyber-hub-ikram</h3>
-                <p class="text-sm text-slate-400 mb-8 leading-relaxed">Pusat pengembangan sistem otomatisasi mandiri dan manajemen arsitektur penyimpanan data modern.</p>
-                <a href="https://cyber-hub-ikram.web.app/" target="_blank" class="inline-flex items-center text-xs font-bold tracking-widest text-white btn-main px-6 py-3 rounded-xl hover:scale-105 transition-all">
-                    AKSES SISTEM <i class="fas fa-external-link-alt ml-2"></i>
-                </a>
-            </div>
+            <a href="#" class="flex items-center p-5 luxury-card luxury-border rounded-2xl group">
+                <div class="w-12 h-12 rounded-full bg-black/40 border border-white/10 flex items-center justify-center shrink-0 mr-4 group-hover:border-[#d4af37]/50 transition-colors">
+                    <i class="fas fa-chart-line text-[#d4af37] text-lg"></i>
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-luxury text-white text-lg group-hover:text-[#fcf6ba] transition-colors">Financial System</h2>
+                    <p class="text-[9px] text-slate-400 font-light tracking-widest uppercase mt-1">Ledger & Firebase App</p>
+                </div>
+                <i class="fas fa-chevron-right text-slate-600 text-xs group-hover:text-[#d4af37] transition-colors"></i>
+            </a>
 
-            <div class="cyber-card p-10 rounded-[2rem] group relative overflow-hidden border-pink-900/50 hover:border-pink-500">
-                <i class="fas fa-user-shield text-4xl text-pink-500 mb-6"></i>
-                <h3 class="text-2xl font-black text-white mb-3 italic">ikram-portfolio</h3>
-                <p class="text-sm text-slate-400 mb-8 leading-relaxed">Representasi profesional yang menampilkan dokumentasi proyek strategis dan kapabilitas infrastruktur digital.</p>
-                <a href="https://ikram-portfolio-f73a3.web.app" target="_blank" class="inline-flex items-center text-xs font-bold tracking-widest text-pink-400 border border-pink-500/30 px-6 py-3 rounded-xl hover:bg-pink-600 hover:text-white transition-all">
-                    LIHAT PROFIL <i class="fas fa-chevron-right ml-2"></i>
-                </a>
-            </div>
+            <a href="#" class="flex items-center p-5 luxury-card luxury-border rounded-2xl group">
+                <div class="w-12 h-12 rounded-full bg-black/40 border border-white/10 flex items-center justify-center shrink-0 mr-4 group-hover:border-[#d4af37]/50 transition-colors">
+                    <i class="fas fa-user-tie text-[#d4af37] text-lg"></i>
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-luxury text-white text-lg group-hover:text-[#fcf6ba] transition-colors">Professional Profile</h2>
+                    <p class="text-[9px] text-slate-400 font-light tracking-widest uppercase mt-1">Pharmacy Tech / STRTTK</p>
+                </div>
+                <i class="fas fa-chevron-right text-slate-600 text-xs group-hover:text-[#d4af37] transition-colors"></i>
+            </a>
 
-            <div class="cyber-card p-10 rounded-[2rem] group relative overflow-hidden border-emerald-900/50 hover:border-emerald-500">
-                <i class="fas fa-network-wired text-4xl text-emerald-500 mb-6"></i>
-                <h3 class="text-2xl font-black text-white mb-3 italic">cyber-link</h3>
-                <p class="text-sm text-slate-400 mb-8 leading-relaxed">Pusat konektivitas untuk integrasi identitas digital dan akses jaringan komunitas eksklusif.</p>
-                <a href="https://cyber-link-4d61c.web.app/" target="_blank" class="inline-flex items-center text-xs font-bold tracking-widest text-emerald-400 border border-emerald-500/50 px-6 py-3 rounded-xl hover:bg-emerald-600 hover:text-white transition-all">
-                    HUBUNGKAN <i class="fas fa-link ml-2"></i>
-                </a>
-            </div>
+            <a href="https://github.com/ikram-cyber/cyber-hub-ikram" target="_blank" class="flex items-center p-5 luxury-card luxury-border rounded-2xl group">
+                <div class="w-12 h-12 rounded-full bg-black/40 border border-white/10 flex items-center justify-center shrink-0 mr-4 group-hover:border-[#d4af37]/50 transition-colors">
+                    <i class="fab fa-github text-[#d4af37] text-lg"></i>
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-luxury text-white text-lg group-hover:text-[#fcf6ba] transition-colors">Source Code & Scripts</h2>
+                    <p class="text-[9px] text-slate-400 font-light tracking-widest uppercase mt-1">cyber-hub-ikram Repo</p>
+                </div>
+                <i class="fas fa-chevron-right text-slate-600 text-xs group-hover:text-[#d4af37] transition-colors"></i>
+            </a>
 
-            <div class="cyber-card p-10 rounded-[2rem] group relative overflow-hidden border-orange-900/50 hover:border-orange-500">
-                <i class="fas fa-wave-square text-4xl text-orange-500 mb-6"></i>
-                <h3 class="text-2xl font-black text-white mb-3 italic">Premium Audio Hub</h3>
-                <p class="text-sm text-slate-400 mb-8 leading-relaxed">Katalog distribusi frekuensi digital premium untuk sinkronisasi otak dan manifestasi energi.</p>
-                <a href="https://ikram-cyber.github.io/audio-hub" target="_blank" class="inline-flex items-center text-xs font-bold tracking-widest text-orange-400 border border-orange-500/30 px-6 py-3 rounded-xl hover:bg-orange-600 hover:text-white transition-all">
-                    BUKA KATALOG <i class="fas fa-shopping-bag ml-2"></i>
-                </a>
+        </div>
+
+        <footer class="pt-12 pb-6 text-center mt-8 relative">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
+            
+            <div class="flex justify-center gap-8 mb-8">
+                <a href="https://instagram.com/ikram_cyber" class="text-slate-500 hover:text-[#d4af37] transition-colors transform hover:scale-110"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="https://tiktok.com/@ikram_cyber" class="text-slate-500 hover:text-[#d4af37] transition-colors transform hover:scale-110"><i class="fab fa-tiktok text-xl"></i></a>
+                <a href="https://wa.me/6282123436383" class="text-slate-500 hover:text-[#d4af37] transition-colors transform hover:scale-110"><i class="fab fa-whatsapp text-xl"></i></a>
             </div>
             
-        </div>
-    </main>
+            <p class="text-[9px] text-slate-600 uppercase tracking-[0.4em] font-light">
+                &copy; 2026 Ikram Cyber System
+            </p>
+        </footer>
 
-    <footer class="py-12 text-center border-t border-slate-900 bg-slate-950/50">
-        <p class="text-[10px] text-slate-700 font-black tracking-[0.5em] uppercase italic">
-            Developed by ikram-cyber &copy; 2026
-        </p>
-    </footer>
+    </main>
 </body>
 </html>
