@@ -17,8 +17,12 @@
     </style>
 </head>
 <body class="text-slate-300 antialiased pb-20 relative flex flex-col min-h-screen">
-    <main class="max-w-md mx-auto px-6 pt-24 flex-1 w-full space-y-12">
 
+    <button id="menu-btn" class="absolute top-6 left-6 z-50 text-slate-400 hover:text-[#d4af37] text-2xl transition-colors">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <main class="max-w-md mx-auto px-6 pt-24 flex-1 w-full space-y-12">
         <div class="text-center space-y-6">
             <div class="w-24 h-24 mx-auto rounded-full border border-[#d4af37]/40 flex items-center justify-center bg-black/50 mb-8">
                 <i class="fas fa-fingerprint text-5xl gold-text"></i>
@@ -28,7 +32,6 @@
         </div>
 
         <div class="pt-4 space-y-6">
-            
             <a href="https://ikram-cyber.github.io/audio-hub" class="flex items-center p-6 luxury-card luxury-border rounded-2xl group">
                 <div class="w-14 h-14 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mr-5 transition-all group-hover:border-[#d4af37]">
                     <i class="fas fa-headphones-alt text-[#d4af37] text-xl"></i>
@@ -50,9 +53,7 @@
                 </div>
                 <i class="fas fa-play text-[#d4af37] transition-colors"></i>
             </a>
-
         </div>
-
     </main>
 
     <footer class="pt-12 pb-8 text-center mt-auto">
@@ -63,5 +64,53 @@
         </div>
         <p class="text-[10px] text-slate-700 uppercase tracking-[0.5em] font-light">&copy; 2026 Ikram Cyber System</p>
     </footer>
+
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 z-[60] hidden transition-opacity duration-300 opacity-0"></div>
+
+    <div id="side-menu" class="fixed top-0 left-0 w-72 h-full bg-[#0a0a0a] border-r border-[#d4af37]/30 z-[70] transform -translate-x-full transition-transform duration-300 flex flex-col overflow-y-auto shadow-[10px_0_30px_rgba(0,0,0,0.8)]">
+        
+        <div class="flex items-center justify-between p-6 border-b border-white/10">
+            <div class="flex items-center gap-3">
+                <i class="fab fa-github text-3xl text-white"></i>
+                <span class="font-luxury text-[#d4af37] font-bold tracking-wider">ikram-cyber</span>
+            </div>
+            <button id="close-btn" class="text-slate-400 hover:text-[#d4af37] text-xl transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="flex-1 py-4 font-luxury">
+            <a href="#" class="flex items-center px-6 py-4 text-slate-300 hover:bg-white/5 hover:text-[#d4af37] border-l-2 border-transparent hover:border-[#d4af37] transition-all"><i class="fas fa-home w-8"></i> Home</a>
+            <a href="#" class="flex items-center px-6 py-4 text-slate-300 hover:bg-white/5 hover:text-[#d4af37] border-l-2 border-transparent hover:border-[#d4af37] transition-all"><i class="fas fa-book w-8"></i> Repositories</a>
+            <a href="#" class="flex items-center px-6 py-4 text-slate-300 hover:bg-white/5 hover:text-[#d4af37] border-l-2 border-transparent hover:border-[#d4af37] transition-all"><i class="fas fa-chart-pie w-8"></i> Financial Manager</a>
+            <a href="#" class="flex items-center px-6 py-4 text-slate-300 hover:bg-white/5 hover:text-[#d4af37] border-l-2 border-transparent hover:border-[#d4af37] transition-all"><i class="fas fa-robot w-8"></i> Bot Automation</a>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const sideMenu = document.getElementById('side-menu');
+        const backdrop = document.getElementById('menu-backdrop');
+
+        function toggleMenu() {
+            // Geser menu
+            sideMenu.classList.toggle('-translate-x-full');
+            
+            // Munculkan/hilangkan backdrop gelap
+            if (backdrop.classList.contains('hidden')) {
+                backdrop.classList.remove('hidden');
+                setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+            } else {
+                backdrop.classList.add('opacity-0');
+                setTimeout(() => backdrop.classList.add('hidden'), 300);
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        backdrop.addEventListener('click', toggleMenu);
+    </script>
+
 </body>
 </html>
