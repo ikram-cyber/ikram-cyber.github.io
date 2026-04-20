@@ -71,8 +71,8 @@
         
         <div class="flex items-center justify-between p-6 border-b border-white/10">
             <div class="flex items-center gap-3">
-                <i class="fab fa-github text-3xl text-white"></i>
-                <span class="font-luxury text-[#d4af37] font-bold tracking-wider">ikram-cyber</span>
+                <i class="fas fa-fingerprint text-2xl gold-text"></i>
+                <span class="font-luxury text-[#d4af37] font-bold tracking-wider uppercase">Ikram Cyber</span>
             </div>
             <button id="close-btn" class="text-slate-400 hover:text-[#d4af37] text-xl transition-colors">
                 <i class="fas fa-times"></i>
@@ -81,7 +81,7 @@
         
         <div class="flex-1 py-4 font-luxury">
             <a href="#" class="flex items-center px-6 py-4 text-slate-300 hover:bg-white/5 hover:text-[#d4af37] border-l-2 border-transparent hover:border-[#d4af37] transition-all"><i class="fas fa-home w-8"></i> Home</a>
-            <a href="#" class="flex items-center px-6 py-4 text-slate-300 hover:bg-white/5 hover:text-[#d4af37] border-l-2 border-transparent hover:border-[#d4af37] transition-all"><i class="fas fa-book w-8"></i> Repositories</a>
+            <a href="https://github.com/ikram-cyber?tab=repositories" class="flex items-center px-6 py-4 text-slate-300 hover:bg-white/5 hover:text-[#d4af37] border-l-2 border-transparent hover:border-[#d4af37] transition-all"><i class="fas fa-book w-8"></i> Repositories</a>
             <a href="#" class="flex items-center px-6 py-4 text-slate-300 hover:bg-white/5 hover:text-[#d4af37] border-l-2 border-transparent hover:border-[#d4af37] transition-all"><i class="fas fa-chart-pie w-8"></i> Financial Manager</a>
             <a href="#" class="flex items-center px-6 py-4 text-slate-300 hover:bg-white/5 hover:text-[#d4af37] border-l-2 border-transparent hover:border-[#d4af37] transition-all"><i class="fas fa-robot w-8"></i> Bot Automation</a>
         </div>
@@ -94,10 +94,7 @@
         const backdrop = document.getElementById('menu-backdrop');
 
         function toggleMenu() {
-            // Geser menu
             sideMenu.classList.toggle('-translate-x-full');
-            
-            // Munculkan/hilangkan backdrop gelap
             if (backdrop.classList.contains('hidden')) {
                 backdrop.classList.remove('hidden');
                 setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
