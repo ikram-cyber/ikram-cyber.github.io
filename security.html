@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Infrastructure | Ikram Cyber System</title>
+    <title>Security | Ikram Cyber System</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
@@ -11,47 +11,34 @@
         body { font-family: 'Montserrat', sans-serif; background-color: #030303; }
         .font-luxury { font-family: 'Playfair Display', serif; }
         .gold-text { background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); -webkit-background-clip: text; color: transparent; }
-        .custom-scroll::-webkit-scrollbar { width: 4px; }
-        .custom-scroll::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.5); border-radius: 10px; }
     </style>
 </head>
-<body class="text-slate-300 antialiased min-h-screen flex flex-col selection:bg-[#d4af37] selection:text-black">
-
+<body class="text-slate-300 antialiased min-h-screen flex flex-col">
     <nav class="w-full p-6 border-b border-white/10 flex justify-between items-center bg-black/50 backdrop-blur-md sticky top-0 z-50">
         <a href="index.html" class="flex items-center gap-3 group">
             <i class="fas fa-arrow-left text-slate-500 group-hover:text-[#d4af37] transition-colors"></i>
-            <span class="text-xs tracking-[0.2em] uppercase font-bold text-slate-400 group-hover:text-white transition-colors">Back to Hub</span>
+            <span class="text-xs tracking-[0.2em] uppercase font-bold text-slate-400 group-hover:text-white">Back to Hub</span>
         </a>
         <i class="fas fa-shield-alt text-2xl gold-text"></i>
     </nav>
-
     <main class="flex-1 max-w-3xl mx-auto px-6 py-16 w-full space-y-12">
         <header class="text-center space-y-4">
-            <h1 class="font-luxury text-4xl md:text-5xl font-bold text-white tracking-tight">Security <span class="gold-text italic">Infrastructure</span></h1>
-            <p class="text-xs text-[#d4af37] tracking-[0.3em] uppercase">Ikram Cyber System &bull; Enterprise Protocol</p>
+            <h1 class="font-luxury text-4xl font-bold text-white tracking-tight">Security <span class="gold-text italic">Architecture</span></h1>
+            <p class="text-xs text-[#d4af37] tracking-[0.3em] uppercase">Enterprise Defense Protocol</p>
         </header>
-
-        <article class="space-y-8 text-sm md:text-base leading-relaxed text-slate-400 font-light text-justify">
-            <div class="bg-white/5 border border-white/10 p-6 md:p-8 rounded-2xl shadow-lg hover:border-[#d4af37]/30 transition-colors">
-                <h2 class="text-lg text-white font-bold tracking-wide mb-3 flex items-center gap-2"><i class="fas fa-lock text-[#d4af37]"></i> Data Encryption & Privacy</h2>
-                <p>At Ikram Cyber System, the integrity and confidentiality of user data are our highest priorities. All data in transit is secured using advanced cryptographic protocols (TLS 1.3), ensuring that sensitive information remains completely isolated from unauthorized interception. Our storage architectures utilize AES-256 encryption, forming an impenetrable layer of defense at the database level.</p>
+        <article class="space-y-8 text-sm leading-relaxed text-slate-400 font-light text-justify">
+            <div class="bg-white/5 border border-white/10 p-6 rounded-2xl shadow-lg">
+                <h2 class="text-lg text-white font-bold mb-3"><i class="fas fa-lock text-[#d4af37] mr-2"></i> Cryptographic Integrity</h2>
+                <p>We utilize industry-standard AES-256 encryption protocols for all localized data handling. The Master Hub's internal communication is protected via TLS 1.3 encryption, ensuring a secure tunnel for all proprietary frequency daemons.</p>
             </div>
-
-            <div class="bg-white/5 border border-white/10 p-6 md:p-8 rounded-2xl shadow-lg hover:border-[#d4af37]/30 transition-colors">
-                <h2 class="text-lg text-white font-bold tracking-wide mb-3 flex items-center gap-2"><i class="fas fa-server text-[#d4af37]"></i> Automated Threat Mitigation</h2>
-                <p>Leveraging high-performance backend environments, our infrastructure incorporates automated scripts and daemon processes that continuously monitor network traffic. These proactive systems instantly detect anomalies, isolate compromised nodes, and execute zero-downtime failover procedures, guaranteeing 99.9% uptime for our core modules.</p>
-            </div>
-
-            <div class="bg-white/5 border border-white/10 p-6 md:p-8 rounded-2xl shadow-lg hover:border-[#d4af37]/30 transition-colors">
-                <h2 class="text-lg text-white font-bold tracking-wide mb-3 flex items-center gap-2"><i class="fas fa-code-branch text-[#d4af37]"></i> Deployment Integrity</h2>
-                <p>Every line of code pushed to our repositories undergoes rigorous version control validation. By utilizing secure CI/CD pipelines, we ensure that external dependencies are systematically audited before production deployment, fortifying our ecosystem against supply chain vulnerabilities.</p>
+            <div class="bg-white/5 border border-white/10 p-6 rounded-2xl shadow-lg">
+                <h2 class="text-lg text-white font-bold mb-3"><i class="fas fa-network-wired text-[#d4af37] mr-2"></i> Threat Mitigation</h2>
+                <p>Continuous automated auditing processes monitor for supply-chain vulnerabilities and brute-force attempts. Our CI/CD pipelines ensure that every production deployment is sanitized and verified against proprietary security signatures.</p>
             </div>
         </article>
     </main>
-
-    <footer class="w-full py-8 text-center border-t border-white/10 mt-auto">
-        <p class="text-[10px] text-slate-600 uppercase tracking-[0.3em]">&copy; 2026 Ikram Cyber System. Protected under proprietary licensing.</p>
+    <footer class="w-full py-8 text-center border-t border-white/10 mt-auto bg-black/50">
+        <p class="text-[10px] text-slate-600 uppercase tracking-[0.3em]">&copy; 2026 Ikram Cyber System. Protected by Proprietary Protocols.</p>
     </footer>
-
 </body>
 </html>
